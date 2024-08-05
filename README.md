@@ -4,7 +4,7 @@ from email.mime.text import MIMEText
 
 def send_email(subject, body, to_email):
     # Email account credentials
-    from_email = 'your_email@example.com'
+    from_email = 'almuslimkarpet@gmail.com '
     password = 'your_password'
 
     # Setting up the MIME
