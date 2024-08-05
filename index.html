@@ -8,7 +8,7 @@
 <link rel='stylesheet' href='css/woocommerce-smallscreen.css' type='text/css' media='only screen and (max-width: 768px)'/>
 <link rel='stylesheet' href='css/woocommerce.css' type='text/css' media='all'/>
 <link rel='stylesheet' href='css/font-awesome.min.css' type='text/css' media='all'/>
-<link rel='stylesheet' href='style.css' type='text/css' media='all'/>
+<link rel='stylesheet' href='style.css' type='text/css' media=>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Oswald:400,500,700%7CRoboto:400,500,700%7CHerr+Von+Muellerhoff:400,500,700%7CQuattrocento+Sans:400,500,700' type='text/css' media='all'/>
 <link rel='stylesheet' href='css/easy-responsive-shortcodes.css' type='text/css' media='all'/>
 </head>
@@ -143,7 +143,7 @@
 	<div class="container">
 		<div class="site-info">
 			<h1 style="font-family: 'Herr Von Muellerhoff';color: #ccc;font-weight:300;text-align: center;margin-bottom:0;margin-top:0;line-height:1.4;font-size: 46px;">ZIPMSI</h1>
-			 <a target="blank" href="https://www.wowthemes.net/">&copy; ZIPMSI belikan pengembang cofee</a>
+			 <a target="blank" href="#/">&copy; ZIPMSI belikan pengembang cofee</a>
 		</div>
 	</div>	
 	</footer>
@@ -152,7 +152,47 @@
 <!-- #page -->
 <script src='js/jquery.js'></script>
 <script src='js/plugins.js'></script>
-<script src='js/scripts.js'></script>
+<script>
+  /*---------------------------------------------------------------------------------------------
+  Skip Link Focus Fix
+----------------------------------------------------------------------------------------------*/
+( function() {
+	var is_webkit = navigator.userAgent.toLowerCase().indexOf( 'webkit' ) > -1,
+	    is_opera  = navigator.userAgent.toLowerCase().indexOf( 'opera' )  > -1,
+	    is_ie     = navigator.userAgent.toLowerCase().indexOf( 'msie' )   > -1;
+
+	if ( ( is_webkit || is_opera || is_ie ) && document.getElementById && window.addEventListener ) {
+		window.addEventListener( 'hashchange', function() {
+			var element = document.getElementById( location.hash.substring( 1 ) );
+
+			if ( element ) {
+				if ( ! /^(?:a|select|input|button|textarea)$/i.test( element.tagName ) )
+					element.tabIndex = -1;
+
+				element.focus();
+			}
+		}, false );
+	}
+})();
+
+
+/*---------------------------------------------------------------------------------------------
+  Scroll to top
+----------------------------------------------------------------------------------------------*/
+jQuery(document).ready(function($){
+    $(window).scroll(function(){
+        if ($(this).scrollTop() < 400) {
+            $('.smoothup') .fadeOut();
+        } else {
+            $('.smoothup') .fadeIn();
+        }
+    });
+    $('.smoothup').on('click', function(){
+        $('html, body').animate({scrollTop:0}, 'slow');
+        return false;
+        });
+});
+</script>
 <script src='js/masonry.pkgd.min.js'></script>
 </body>
 </html>
