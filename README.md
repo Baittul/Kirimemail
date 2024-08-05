@@ -33,4 +33,4 @@ def send_email(subject, body, to_email):
         server.quit()
 
 # Usage
-send_email('Test Subject', 'This is a test email body.', 'recipient@example.com')
+send_email('Test Subject', 'This is a test email body.', 'almuslimkarpet@gmail.com ')
