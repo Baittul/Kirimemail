@@ -35,7 +35,7 @@ if (!$errors) {
 	
 	//if POST was used, display the message straight away
 	if ($_POST) {
-		if ($result) echo 'Thank you! We have received your message.';
+		if ($result) echo 'Thank you! (maturnuwun) We have received your message.';
 		else echo 'Sorry, unexpected error. Please try again later';
 		
 	//else if GET was used, return the boolean value so that 
